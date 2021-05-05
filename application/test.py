@@ -1,11 +1,11 @@
-from dataAccess.customerDA import CustomerDA
-from dataAccess.productDA import ProductDA
-from dataAccess.storeHouseDA import StoreHouseDA
+from business.customerBS import CustomerBS
+from business.productBS import ProductBS
+from business.storeHouseBS import StoreHouseBS
 from entities.customer import Customer
 
 # ---------- customer ---------------
 
-customer = CustomerDA()
+customer = CustomerBS()
 List = customer.findAll()
 for item in List:
     print('id = ', item.id, end=' , ')
@@ -31,7 +31,7 @@ print()
 
 # ---------- product ---------------
 
-product = ProductDA()
+product = ProductBS()
 List = product.findAll()
 for item in List:
     print('id = ', item.id, end=' , ')
@@ -51,7 +51,7 @@ print()
 
 # ---------- storeHouse ---------------
 
-storeHouse = StoreHouseDA()
+storeHouse = StoreHouseBS()
 List = storeHouse.findAll()
 for item in List:
     print('number = ', item.number, end=' , ')
