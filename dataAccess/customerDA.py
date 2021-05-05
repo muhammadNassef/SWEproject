@@ -17,12 +17,7 @@ class CustomerDA(BaseDA):
         conn.commit()
         conn.close
 
-        customerList = []
-        for item in data:
-            customer = Customer(item[0], item[1], item[2], item[3], item[4], item[5], item[6])
-            customerList.append(customer)
-
-        return customerList
+        return data
 
     def findById(self, id):
 

@@ -5,7 +5,10 @@ from dataAccess.customerDA import CustomerDA
 class CustomerBS(BaseBS):
 
     def findAll(self):
-        return CustomerDA().findAll()
+        data = [('id', 'name', 'governrate', 'town', 'street_number', 'balance', 'salesperson_id')]
+        for customer in CustomerDA().findAll():
+            data.append(customer)
+        return data
 
     def findById(self, id):
         return CustomerDA().findById(id)
