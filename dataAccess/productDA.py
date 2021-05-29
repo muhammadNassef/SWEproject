@@ -22,7 +22,7 @@ class ProductDA(BaseDA):
             product = Product(item[0], item[1], item[2], item[3])
             productList.append(product)
 
-        return data
+        return productList
 
     def findById(self, id):
 
