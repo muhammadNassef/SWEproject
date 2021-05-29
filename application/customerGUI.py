@@ -22,7 +22,7 @@ def showAllProducts():
 
     # adding data to the treeview
     for item in List:
-        tree.insert('', END, values=item)
+        tree.insert('', END, values=(item.id, item.product_class, item.desc, item.price))
 
     tree.grid(row=0, column=0)
 
